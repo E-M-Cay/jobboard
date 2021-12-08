@@ -6,10 +6,7 @@ const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const fileUpload = require('express-fileupload');
 
-/*const home = require('./routes/dashboard');
-const form = require('./routes/form');*/
 dotenv.config();
-process.env.TOKEN_SECRET;
 
 app.set('view engine', 'ejs');
 app.use(cookieParser());

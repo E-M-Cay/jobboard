@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : Dim 17 oct. 2021 à 20:35
+-- Généré le : mer. 08 déc. 2021 à 16:18
 -- Version du serveur :  8.0.21
 -- Version de PHP : 7.3.21
 
@@ -70,14 +70,16 @@ CREATE TABLE IF NOT EXISTS `applied` (
   PRIMARY KEY (`id`),
   KEY `FK_people_id` (`people_id`),
   KEY `FK_advertisement_id` (`advertisement_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `applied`
 --
 
 INSERT INTO `applied` (`id`, `advertisement_id`, `people_id`, `message`, `date`) VALUES
-(46, 68, 174, 'Please hire me !', '2021-10-17');
+(46, 68, 174, 'Please hire me !', '2021-10-17'),
+(48, 67, 171, 'Application 2 from candidate 1', '2021-10-18'),
+(49, 63, 171, 'aplication', '2021-10-18');
 
 -- --------------------------------------------------------
 
@@ -139,7 +141,7 @@ CREATE TABLE IF NOT EXISTS `people` (
   `gender` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=175 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=177 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `people`
@@ -147,10 +149,11 @@ CREATE TABLE IF NOT EXISTS `people` (
 
 INSERT INTO `people` (`id`, `email`, `phone`, `name`, `first_name`, `password`, `address`, `postal_code`, `birth_date`, `cv`, `website`, `picture`, `gender`) VALUES
 (168, 'jerome.seccia@gmail.com', '0677156976', 'Seccia', 'Jérôme', '$2a$10$6BBbMtbZ2o9btzO2w9ZQyOS6WrxErOOsb62/EWMbvm4SYHk5KDtQK', '6 traverse des loubets', '13011', '1992-04-29 00:00:00', 0x2f70656f706c652f3136382f4ac3a972c3b46d65205365636369612043562e706466, NULL, 0x2f70656f706c652f3136382f4453435f3036383720636f7069652e6a7067, 'male'),
-(171, 'candidate1@mail.fr', '06XXXXXXXX', 'Candidate1', 'John', '$2a$10$U1.3VcSM0ZA2wQ46nGIp8uISOt5aBrpufX4w.s6EQ0B73MpU7c9kG', '1 rue du candidat 1', '13001', '1991-09-03 00:00:00', 0x2f70656f706c652f3137312f4376204ac3a972c3b46d65205365636369612e706466, 'https://candidat1.fr', 0x2f70656f706c652f3137312f63616e646964617465312e6a7067, 'male'),
+(171, 'candidate1@mail.fr', '06XXXXXXXX', 'Candidate1', 'John', '$2a$10$U1.3VcSM0ZA2wQ46nGIp8uISOt5aBrpufX4w.s6EQ0B73MpU7c9kG', '1 rue du candidat 1', '13001', '1991-09-03 00:00:00', 0x2f70656f706c652f3137312f4376204ac3a972c3b46d65205365636369612e706466, 'https://candidat1.fr', 0x2f70656f706c652f3137312f434e4920726563746f2e6a706567, 'male'),
 (172, 'candidate2@mail.fr', '', 'Candidate2', 'Marie', '$2a$10$N1Kpzq8R3i4uY98wWo.T9O8fVTJLil/KIuxymUQqUHol2Qa69MxA.', '1 rue du candidat2', '75001', '2001-03-29 00:00:00', 0x2f70656f706c652f3137322f4376204ac3a972c3b46d65205365636369612e706466, 'https://candidat2.fr', 0x2f70656f706c652f3137322f63616e646964617465322e6a7067, 'female'),
 (173, 'candidate3@mail.fr', '06XXXXXXXX', 'Candidate3', 'Franck', '$2a$10$m3kZLwb3IvewBtYwPsnZreKgO.X6NYPmM0zI9EmWq.ihis4zftKgW', '1 rue du candidat3', '45000', '1967-05-01 00:00:00', 0x2f70656f706c652f3137332f4376204ac3a972c3b46d65205365636369612e706466, '', 0x2f70656f706c652f3137332f63616e646964617465332e6a7067, 'male'),
-(174, 'candidate4@mail.fr', '06XXXXXXX', 'Candidate4', 'Olivia', '$2a$10$O32gKRPZdFpcRLQOVV6lxu3WLA8lI3hNcA0QKxrkmGluKYAAZqkGG', '1 rue du candidat4', '78000', '1998-06-05 00:00:00', 0x2f70656f706c652f3137342f4376204ac3a972c3b46d65205365636369612e706466, '', 0x2f70656f706c652f3137342f63616e646964617465342e6a7067, 'female');
+(174, 'candidate4@mail.fr', '06XXXXXXX', 'Candidate4', 'Olivia', '$2a$10$O32gKRPZdFpcRLQOVV6lxu3WLA8lI3hNcA0QKxrkmGluKYAAZqkGG', '1 rue du candidat4', '78000', '1998-06-05 00:00:00', 0x2f70656f706c652f3137342f4376204ac3a972c3b46d65205365636369612e706466, '', 0x2f70656f706c652f3137342f63616e646964617465342e6a7067, 'female'),
+(176, 'admin@admin.fr', NULL, NULL, NULL, '$2a$10$jd2dy/b3dTavaSD1/wQaWO9mSf9NmUAYz8CvvqpV4TaGWgwkXwfi.', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 --
 -- Contraintes pour les tables déchargées

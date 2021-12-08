@@ -34,10 +34,7 @@ router.post('/', isNotAuth, async function (req, res, next) {
         if (result[0].tableName === 'companies') {
           role = 'company';
         }
-        if (
-          email === 'jerome.seccia@gmail.com' ||
-          email === 'bvillon138@gmail.com'
-        ) {
+        if (email === 'admin@admin.fr') {
           role = 'admin';
         }
         const checked = await bcrypt.compare(password, result[0].password);
@@ -53,8 +50,6 @@ router.post('/', isNotAuth, async function (req, res, next) {
           let token = jwt.sign(payload, process.env.TOKEN_SECRET, {
             expiresIn: 3600,
           });
-          //console.log(res.body);
-          //console.log('yes ?');
           res
             .cookie('access_token', token, {
               httpOnly: true,
