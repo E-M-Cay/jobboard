@@ -7,7 +7,7 @@ Backend and JavaScript in front-end made by me
 
 ## installation
 
-- Download the provided server
+- Download the provided repo
 - install dependencies with npm install
 - Import the provided SQL database in MySQL
 - rename .env.example to .env
