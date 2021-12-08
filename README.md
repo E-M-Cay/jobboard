@@ -1,4 +1,11 @@
-# jobboard
+# Jobboard
+
+JobBoard created in 3 weeks during a school project for Epitech.
+Backend and JavaScript in front-end made by me
+
+---
+
+## installation
 
 -Download the provided server
 -install dependencies with npm install
